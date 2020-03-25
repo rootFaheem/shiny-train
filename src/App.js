@@ -14,7 +14,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Writing the app again
+          App is deployed using Travis CI pipeline
         </a>
       </header>
     </div>
