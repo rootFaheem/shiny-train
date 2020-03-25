@@ -15,7 +15,7 @@ deploy:
   app: "docker-core"
   env: "DockerCore-env"
   bucket_name: "elasticbeanstalk-ap-south-1-403740642838"
-  bucket_path: "docker-core"
+  bucket_path: "docker-test"
   on:
     branch: master
   access-key-id: $AWS_API_KEY
