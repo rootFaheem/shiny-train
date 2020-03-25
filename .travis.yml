@@ -1,0 +1,22 @@
+sudo: required
+services:
+  - docker
+
+language: node_js
+  node_js:
+    - 12.16.1
+
+before-install:
+  - docker build -t rootfaheem/docker-core -f Dockerfile.dev .
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "docker-core"
+  env: "DockerCore-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-403740642838"
+  bucket_path: "docker-core"
+  on:
+    branch: master
+  access-key-id: $AWS_API_KEY
+  secret-access-key: $AWS_SECRET_KEY
